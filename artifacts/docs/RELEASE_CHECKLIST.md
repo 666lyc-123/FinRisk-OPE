@@ -10,7 +10,7 @@
 - [x] Paper text, tables, and selector counts agree with the reference results.
 - [x] Reviewer concerns are addressed: constructed logging behavior is delimited, selectors use equal ACCEPT counts, and transaction costs/market impact are explicit limitations.
 - [x] Current camera-ready TeX and `main_preupload.pdf` are synchronized, with the real GitHub URL and the certificate-conditional strict false-safe explanation.
-- [x] IEEE two-column conference format, Letter page size, 8 pages including references, and embedded Type 1 fonts.
+- [x] IEEE two-column conference format, Letter page size, 7 pages including references, and embedded Type 1 fonts.
 - [x] Bibliography and cross-references compile without unresolved entries.
 
 ## Required after creating the GitHub repository
