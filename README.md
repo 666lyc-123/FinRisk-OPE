@@ -60,31 +60,6 @@ python scripts/verify_release.py \
 
 The source datasets come from the [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html). Exact source hashes and provenance are recorded in `artifacts/docs/DATA_SOURCES.md` and `outputs/reference_run/manifest.json`.
 
-## Camera-ready paper
-
-The repository URL is already written into `paper_source/main.tex` as:
-
-```text
-https://github.com/666lyc-123/FinRisk-OPE
-```
-
-The committed `paper_source/main_preupload.pdf` is compiled from this source and includes the same current matched-acceptance results as the generated tables. If the repository URL changes, update the TeX source and rebuild the PDF before submission:
-
-```powershell
-python scripts\set_repository_url.py https://github.com/OWNER/FinRisk-OPE
-```
-
-Then compile:
-
-```bash
-cd paper_source
-pdflatex main.tex
-bibtex main
-pdflatex main.tex
-pdflatex main.tex
-```
-
-The resulting PDF must be validated through IEEE PDF eXpress before CPS submission. The checked-in PDF is a local pre-upload candidate; PDF eXpress approval and CPS submission are still required.
 
 ## Scope and licensing
 
