@@ -68,9 +68,10 @@ Overall, FinRisk-OPE reframes financial offline policy selection as a certificat
 
 
 \begin{figure}[t]
+\vspace{-4pt}
 \centering
 \includegraphics[width=\columnwidth]{pipeline_clean.png}
-\caption{FinRisk-OPE pipeline from public portfolio panels to full-information rewards, known-propensity logs, return/risk OPE diagnostics, and SCROPE++ selective certification.}
+\caption{FinRisk-OPE pipeline from public panels to selective certification.}
 \label{fig:pipeline}
 \end{figure}
 
@@ -245,12 +246,13 @@ The public source data are available from the Kenneth R. French Data Library at 
 This paper reframes financial offline policy selection as a policy-certification problem rather than a return-ranking problem. While financial decision systems are often evaluated through retrospective backtests, deployment requires stronger evidence: a policy must be supported by the logged data, its uncertainty estimates must remain reliable under distribution shift, and its downside risk must be acceptably bounded. FinRisk-OPE was developed to make these requirements measurable and reproducible.
 The empirical results reveal a consistent pattern across financial tasks. Accurate return estimation alone is insufficient for reliable deployment. Policies operating in weak-support regions frequently exhibit degraded interval coverage, while downside-risk measures such as CVaR95 can be substantially underestimated even when expected-return estimates appear accurate. These findings suggest that support deficiency and tail-risk misestimation are not isolated technical issues but fundamental obstacles to trustworthy financial off-policy evaluation.
 To address this challenge, we introduced SCROPE++, a selective certification framework that combines support evidence, return uncertainty, and downside-risk assessment into a unified deployment decision. Rather than forcing a binary recommendation, SCROPE++ explicitly allows abstention when the available evidence is insufficient. In financial settings, such abstention should be viewed as a safety mechanism rather than a failure mode, reflecting the principle that uncertainty itself is actionable information.
-Beyond the proposed benchmark and certification framework, the broader implication of this work is methodological. Financial offline learning should not be evaluated solely by estimated returns or backtest rankings. Instead, evaluation should ask whether the available counterfactual evidence is sufficient to justify deployment. By combining known propensities, exact counterfactual rewards, support diagnostics, risk estimation, and selective certification within a date-frozen public benchmark, FinRisk-OPE provides a reproducible setting for studying this question.
+Financial offline learning should therefore be evaluated by whether counterfactual evidence justifies deployment, rather than by return rankings alone. By combining known propensities, exact counterfactual rewards, support diagnostics, risk estimation, and selective certification within a date-frozen public benchmark, FinRisk-OPE provides a reproducible setting for this question.
 
-Several limitations remain. The logging policies are constructed rather than recovered from real investor behavior. The current evaluation omits transaction costs and market impact; rewards are based on realized portfolio-panel returns and do not model execution frictions. The benchmark also does not yet cover richer transaction-level, order-book, or product-interaction environments. Future work should incorporate validated real-world logs, explicit execution-cost and market-impact models, and richer distributional-risk estimators. More broadly, extending certification beyond expected performance toward robust guarantees under support uncertainty remains an important direction for financial decision intelligence.
-Ultimately, the central lesson is simple: a policy that appears profitable is not necessarily a policy that can be trusted. Reliable financial deployment requires not only prediction and estimation, but certification of the evidence on which those decisions rest.
+Several limitations remain. Logging policies are constructed rather than recovered from investor behavior, and rewards omit transaction costs and market impact. The benchmark does not yet cover transaction-level, order-book, or product-interaction environments. Future work should add validated real-world logs, execution frictions, and richer distributional-risk estimators. The central implication is that profitable backtests still require support, uncertainty, and downside-risk certification before deployment.
 
+{\scriptsize
 \bibliographystyle{IEEEtran}
 \bibliography{finrisk_ope_refs}
+}
 
 \end{document}

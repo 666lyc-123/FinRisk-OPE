@@ -117,17 +117,19 @@ def figures(paper, coverage, selectors, cells):
     fig.savefig(paper/'selectors_current.pdf', bbox_inches='tight')
     fig.savefig(paper/'matched_acceptance_rates.png', dpi=220, bbox_inches='tight')
     plt.close(fig)
-    fig,ax=plt.subplots(figsize=(7.2,1.4))
-    ax.set(xlim=(0,10),ylim=(0,1)); ax.axis('off')
+    # Compact single-row pipeline figure: the camera-ready paper is limited to
+    # eight pages, so keep the workflow legible while minimizing vertical use.
+    fig,ax=plt.subplots(figsize=(7.16,0.92))
+    ax.set(xlim=(0,11.55),ylim=(0,1)); ax.axis('off')
     titles=['Public panels','Reward matrix','Logged feedback','OPE diagnostics','SCROPE++']
-    subtitles=['Kenneth French\n15 tasks',f'{cells/1e6:.3f}M cells\n20 lagged features','8 behaviors\n3 logging seeds','DR intervals\nWeighted CVaR95','Return ranking\nRisk + support gates']
+    subtitles=['15 tasks',f'{cells/1e6:.3f}M cells\n20 lagged features','8 behaviors\n3 seeds','DR intervals\nweighted CVaR95','Return LCB\nrisk + support']
     colors=['#EEF1F4','#EDF3FA','#FCF4DE','#EAF5F2','#F9EFEC']
     for i,(title,sub,color) in enumerate(zip(titles,subtitles,colors)):
-        left=i*2.03
-        ax.add_patch(FancyBboxPatch((left,.13),1.68,.70,boxstyle='round,pad=0.025,rounding_size=0.035',fc=color,ec='#5B6775',lw=.75))
-        ax.text(left+.84,.64,title,ha='center',va='center',fontsize=8,weight='bold')
-        ax.text(left+.84,.35,sub,ha='center',va='center',fontsize=6.6)
-        if i<4: ax.annotate('',xy=(left+2.00,.49),xytext=(left+1.75,.49),arrowprops=dict(arrowstyle='->',lw=.8,mutation_scale=5,color='#364152'))
+        left=i*2.30
+        ax.add_patch(FancyBboxPatch((left,.20),1.95,.58,boxstyle='round,pad=0.02,rounding_size=0.03',fc=color,ec='#5B6775',lw=.7))
+        ax.text(left+.975,.61,title,ha='center',va='center',fontsize=7.5,weight='bold')
+        ax.text(left+.975,.35,sub,ha='center',va='center',fontsize=5.2,linespacing=1.05)
+        if i<4: ax.annotate('',xy=(left+2.25,.49),xytext=(left+2.01,.49),arrowprops=dict(arrowstyle='->',lw=.7,mutation_scale=4,color='#364152'))
     fig.savefig(paper/'pipeline_current.pdf',bbox_inches='tight',pad_inches=.02)
     fig.savefig(paper/'pipeline_clean.png', dpi=220, bbox_inches='tight', pad_inches=.02)
     plt.close(fig)
