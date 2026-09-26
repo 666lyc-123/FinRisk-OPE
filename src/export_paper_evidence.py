@@ -120,12 +120,14 @@ def figures(paper, coverage, selectors, cells):
     # Compact single-row pipeline figure: the camera-ready paper is limited to
     # eight pages, so keep the workflow legible while minimizing vertical use.
     fig,ax=plt.subplots(figsize=(7.16,0.92))
-    ax.set(xlim=(0,11.55),ylim=(0,1)); ax.axis('off')
+    # Keep an explicit safety margin so the first and last box borders survive
+    # tight bounding-box cropping and two-column LaTeX scaling.
+    ax.set(xlim=(-0.25,11.60),ylim=(0,1)); ax.axis('off')
     titles=['Public panels','Reward matrix','Behavior logs','OPE diagnostics','SCROPE++']
     subtitles=['Kenneth French\n15 tasks',f'{cells/1e6:.3f}M cells','8 behaviors','DR + CVaR95','Risk + support']
     colors=['#EEF1F4','#EDF3FA','#FCF4DE','#EAF5F2','#F9EFEC']
     for i,(title,sub,color) in enumerate(zip(titles,subtitles,colors)):
-        left=i*2.30
+        left=.15+i*2.30
         ax.add_patch(FancyBboxPatch((left,.20),1.95,.58,boxstyle='round,pad=0.02,rounding_size=0.03',fc=color,ec='#5B6775',lw=.7))
         ax.text(left+.975,.61,title,ha='center',va='center',fontsize=7.5,weight='bold')
         ax.text(left+.975,.35,sub,ha='center',va='center',fontsize=5.2,linespacing=1.05)
