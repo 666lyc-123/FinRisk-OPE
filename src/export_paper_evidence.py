@@ -121,7 +121,7 @@ def figures(paper, coverage, selectors, cells):
     # eight pages, so keep the workflow legible while minimizing vertical use.
     fig,ax=plt.subplots(figsize=(7.16,0.92))
     ax.set(xlim=(0,11.55),ylim=(0,1)); ax.axis('off')
-    titles=['Public panels','Reward matrix','Logged feedback','OPE diagnostics','SCROPE++']
+    titles=['Public panels','Reward matrix','Behavior logs','OPE diagnostics','SCROPE++']
     subtitles=['15 tasks',f'{cells/1e6:.3f}M cells','8 behaviors','DR + CVaR95','Risk + support']
     colors=['#EEF1F4','#EDF3FA','#FCF4DE','#EAF5F2','#F9EFEC']
     for i,(title,sub,color) in enumerate(zip(titles,subtitles,colors)):
@@ -130,8 +130,10 @@ def figures(paper, coverage, selectors, cells):
         ax.text(left+.975,.61,title,ha='center',va='center',fontsize=7.5,weight='bold')
         ax.text(left+.975,.35,sub,ha='center',va='center',fontsize=5.2,linespacing=1.05)
         if i<4: ax.annotate('',xy=(left+2.25,.49),xytext=(left+2.01,.49),arrowprops=dict(arrowstyle='->',lw=.7,mutation_scale=4,color='#364152'))
-    fig.savefig(paper/'pipeline_current.pdf',bbox_inches='tight',pad_inches=.02)
-    fig.savefig(paper/'pipeline_clean.png', dpi=220, bbox_inches='tight', pad_inches=.02)
+    fig.savefig(paper/'pipeline_compact.pdf', bbox_inches='tight', pad_inches=.04,
+                facecolor='white')
+    fig.savefig(paper/'pipeline_clean.png', dpi=300, bbox_inches='tight', pad_inches=.04,
+                facecolor='white')
     plt.close(fig)
 
 
