@@ -1,0 +1,25 @@
+scheme,risk_version,budget,mode,target_abstain,baseline,difference_pp,ci_low_pp,ci_high_pp,tasks,ci_draws
+block,bootstrap,baseline_linked,paper_natural,0.25,Support only,20.55940805020726,10.476534288745013,33.47891555939581,15,2000
+block,bootstrap,baseline_linked,paper_natural,0.25,LCB only,-3.6813922356091044,-11.974021592442645,3.9115056204063916,15,2000
+block,bootstrap,baseline_linked,paper_natural,0.25,Risk only,-4.792503346720212,-12.81609195402299,2.5095983296789464,15,2000
+block,bootstrap,fixed_0.10_sensitivity,paper_natural,0.25,Support only,28.2678066842054,14.32349334924772,45.34827051295198,15,2000
+block,bootstrap,fixed_0.10_sensitivity,paper_natural,0.25,LCB only,3.762626262626262,-7.9312623692394695,16.943500474111538,15,2000
+block,bootstrap,fixed_0.10_sensitivity,paper_natural,0.25,Risk only,-14.570707070707067,-26.780230238685146,-0.38061341113666985,15,2000
+block,calibrated_extension,baseline_linked,paper_natural,0.25,Support only,2.117480981883774,0.0,4.709945863719744,15,2000
+block,calibrated_extension,baseline_linked,paper_natural,0.25,LCB only,-1.1720867208672083,-4.722222222222222,2.387917189341237,15,2000
+block,calibrated_extension,baseline_linked,paper_natural,0.25,Risk only,-11.727642276422765,-20.0,-4.748673229622433,15,2000
+block,calibrated_extension,fixed_0.10_sensitivity,paper_natural,0.25,Support only,0.0,0.0,0.0,15,2000
+block,calibrated_extension,fixed_0.10_sensitivity,paper_natural,0.25,LCB only,-1.1111111111111112,-2.5,0.0,15,2000
+block,calibrated_extension,fixed_0.10_sensitivity,paper_natural,0.25,Risk only,-15.0,-21.666666666666668,-8.333333333333332,15,2000
+iid,bootstrap,baseline_linked,paper_natural,0.25,Support only,20.367404978158106,10.636707528772675,33.30596121615251,15,2000
+iid,bootstrap,baseline_linked,paper_natural,0.25,LCB only,-4.151173085436033,-12.098750664540136,3.645276904948933,15,2000
+iid,bootstrap,baseline_linked,paper_natural,0.25,Risk only,-4.151173085436033,-12.61118603042877,4.524712643678138,15,2000
+iid,bootstrap,fixed_0.10_sensitivity,paper_natural,0.25,Support only,28.2678066842054,14.369934832629252,45.34266945130702,15,2000
+iid,bootstrap,fixed_0.10_sensitivity,paper_natural,0.25,LCB only,0.7070707070707061,-10.995345829080922,13.059268141618405,15,2000
+iid,bootstrap,fixed_0.10_sensitivity,paper_natural,0.25,Risk only,-14.570707070707067,-26.35542023101832,-1.0000409539281443,15,2000
+iid,calibrated_extension,baseline_linked,paper_natural,0.25,Support only,2.147592394109007,0.0,4.732675853759624,15,2000
+iid,calibrated_extension,baseline_linked,paper_natural,0.25,LCB only,-0.30864197530864196,-3.0555555555555554,2.375615763546797,15,2000
+iid,calibrated_extension,baseline_linked,paper_natural,0.25,Risk only,-11.141975308641975,-19.166666666666668,-4.519152304478393,15,2000
+iid,calibrated_extension,fixed_0.10_sensitivity,paper_natural,0.25,Support only,0.0,0.0,0.0,15,2000
+iid,calibrated_extension,fixed_0.10_sensitivity,paper_natural,0.25,LCB only,-0.5555555555555556,-1.3888888888888888,0.0,15,2000
+iid,calibrated_extension,fixed_0.10_sensitivity,paper_natural,0.25,Risk only,-15.0,-21.67361111111111,-8.333333333333332,15,2000

@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+outputs/results_rerun/
+outputs/results_ci/
+artifacts/reproduced/
+artifacts/ci/

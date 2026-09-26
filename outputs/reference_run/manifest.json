@@ -1,0 +1,72 @@
+{
+  "status": "COMPLETE",
+  "seeds": [
+    7,
+    17,
+    27
+  ],
+  "bootstrap": 200,
+  "schemes": {
+    "iid": 1,
+    "block": {
+      "monthly": 3,
+      "daily": 20
+    }
+  },
+  "source_sha256": {
+    "100_Portfolios_10x10_CSV.zip": "28f1530cc4073b62c4818de1a1c1f1d8d870947929777514c93e9176e6daea0e",
+    "12_Industry_Portfolios_CSV.zip": "c7316c6ae07bc2028632b57ad757dfef8303a62a6956946d7aabe926aadfdeb4",
+    "17_Industry_Portfolios_CSV.zip": "d99108d51938a44559a839df39a92ab531bd36bcd61bf7f6ddf8b89b7b8300c1",
+    "25_Portfolios_5x5_CSV.zip": "a6522ad4ea890fafb3971938292844e256128de0e2f6929166ff2f0f7d0d573a",
+    "25_Portfolios_5x5_Daily_CSV.zip": "81cd5fc3680eaafac5eeced19600741ee5b00607fe8224bdc6c5dd0368269650",
+    "25_Portfolios_BEME_INV_5x5_CSV.zip": "fae0721eeceda9d2b8a442b87da1643596f7e2ccb32a3a4bbd98cc7de0eb2522",
+    "25_Portfolios_BEME_OP_5x5_CSV.zip": "dcc3945b6470b0e745c560f33fd28a37bdaa372c67a66c452d1c7ad498edd302",
+    "25_Portfolios_ME_INV_5x5_CSV.zip": "88e66145f9e0589ffcb7f8b96c518e917b654d9a4a0407e85562bfae73831f84",
+    "25_Portfolios_ME_INV_5x5_daily_CSV.zip": "96c6f6d9a7d39ed2772efe8485cd12b0a59e1e525e3f239e1e15c4576a9b94bd",
+    "25_Portfolios_ME_OP_5x5_CSV.zip": "7cbe57f3cca13039b6fce13f80c4fbfbab59292cfa2984cacec4a6d4e46a022e",
+    "25_Portfolios_ME_OP_5x5_daily_CSV.zip": "94c1edb31e219c714858fde21ef89869497b218446de7d25ec1ba060f39be585",
+    "25_Portfolios_OP_INV_5x5_CSV.zip": "94baad96f9488f9c07a787ca05069310a49a42ab8f6403dd7b03d740eda85718",
+    "30_Industry_Portfolios_CSV.zip": "965275065e93d289e416566d1b399fb63cef944a3de46a19a413d7adc869b600",
+    "30_Industry_Portfolios_Daily_CSV.zip": "97dbd1a14326a5d515b4bf7adde5d2c2be310786eb009cd12d306270443c413c",
+    "48_Industry_Portfolios_CSV.zip": "99f61578cecbc2d84ec5a0f4737f486ba4a36553ef92127939737ddd5ffbe7a4",
+    "F-F_Momentum_Factor_CSV.zip": "7ee14e892b0f7044902fdbc4e25cfaf175b73d4eda0ae6f4a0354a4433afe065",
+    "F-F_Momentum_Factor_daily_CSV.zip": "b039d986db27fc831bcf1f52ba2134916e96fbeba4762fefc942429b0a568a96",
+    "F-F_Research_Data_5_Factors_2x3_CSV.zip": "b8653b411cc5e28917e7ef643bb42f6d2d3703f84bc170eb6ae38d5267c65807",
+    "F-F_Research_Data_5_Factors_2x3_daily_CSV.zip": "478350b8d60831351fbf754bc593fc0112b013552c24639c10902e1f26d7f306"
+  },
+  "code_sha256": {
+    "directional_validation/run_directional.py": "c4b61ebc72dc19ba68e6363f372f9a462df01d45db703deecb0cd12e79fe229f",
+    "PROTOCOL.md": "cbd990e62407b47b0e9dbb28cbee520409c9bd5a1f447bb1542c2ac8f01995a2",
+    "export_paper_evidence.py": "a656934ef53c0d3eb43ee54792097d8f5e01769b5a24bf0b5ae119407766646b",
+    "recovered_project/src/finrisk_repro/certification.py": "634e1ae10b012250d0b576fed5dc88572de871aee1a476c13efbf7f9a01c9a1f",
+    "recovered_project/src/finrisk_repro/features.py": "09d198099394f002bd6fef4bff0eff61dac81b62ac498115d262e07d767234fe",
+    "recovered_project/src/finrisk_repro/io.py": "c9d34f12c2ccd0efd2d78ec7fe4862a294e3941bb1314d0f440bdffbed180327",
+    "recovered_project/src/finrisk_repro/library.py": "ec54640283092941cc81dd9164ca6b81c1e7cd24306a606a411b01720a7a4a6c",
+    "recovered_project/src/finrisk_repro/logging.py": "5c1fc089f6a59801aacf5f6c7eb62405c40bb202bca2c389f67a67693706b94c",
+    "recovered_project/src/finrisk_repro/ope.py": "e7785ffdf7b5091488aa4f768b756a021545c6cafc43c515f196d37c43ed07ee",
+    "recovered_project/src/finrisk_repro/policies.py": "154bce479ef70f8ad752d499a7bf8245caaaa7179575cf8cf41bd53add6b21b5",
+    "recovered_project/src/finrisk_repro/tasks.py": "c859aee49a5209d486003979ad6bb8219069db13303c13462f56717d5390ed02"
+  },
+  "environment": {
+    "python": "3.14.4",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.4.4",
+    "pandas": "2.3.3",
+    "scipy": "1.17.1",
+    "scikit_learn": "1.8.0",
+    "threads": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1"
+    }
+  },
+  "split": {
+    "train_end": "2005-12-31",
+    "calibration_end": "2014-12-31",
+    "test_start": "2015-01-01"
+  },
+  "runtime_seconds": 324.028029799927,
+  "case_rows": 50784,
+  "tasks": 15,
+  "cells": 2068330
+}

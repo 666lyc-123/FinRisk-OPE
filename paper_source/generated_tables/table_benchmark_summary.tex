@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\caption{Current benchmark after filtering and 60-date warmup. Periods and cells cover train, calibration, and test; feature count is 20 for every task.}
+\label{tab:benchmark_summary}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Family & Tasks & Periods & Actions & Features & Train & Cal. & Test & Cells \\
+\midrule
+Monthly industry & 3 & 694 & 18--48 & 20 & 450 & 108 & 136 & 67,318 \\
+Monthly size--B/M & 2 & 654--694 & 26--100 & 20 & 420--450 & 108 & 126--136 & 83,444 \\
+Monthly size/profit/invest & 2 & 694 & 26 & 20 & 450 & 108 & 136 & 36,088 \\
+Monthly two-characteristic & 3 & 694 & 26 & 20 & 450 & 108 & 136 & 54,132 \\
+Daily size characteristic & 3 & 15753 & 26 & 20 & 10640 & 2265 & 2848 & 1,228,734 \\
+Daily industry/factor & 2 & 15753 & 7--31 & 20 & 10640 & 2265 & 2848 & 598,614 \\
+Total & 15 &  &  &  &  &  &  & 2,068,330 \\
+\bottomrule
+\end{tabular}
+\end{table*}

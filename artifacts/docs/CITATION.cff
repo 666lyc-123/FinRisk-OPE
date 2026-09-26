@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+title: "FinRisk-OPE: A Public Benchmark for Risk-Certified Financial Off-Policy Evaluation"
+message: "If you use this benchmark, code, or evidence package, please cite the accompanying paper."
+type: software
+version: 1.0.0
+date-released: 2026-09-25
+authors:
+  - family-names: Wu
+    given-names: Hongye
+  - family-names: Lan
+    given-names: Youcheng
+  - family-names: Gan
+    given-names: Guangyan
+  - family-names: Shi
+    given-names: Shaobin
+  - family-names: Zou
+    given-names: Jie
+  - family-names: Leung
+    given-names: Kwanting
+  - family-names: Cheng
+    given-names: Yuhan

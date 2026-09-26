@@ -1,0 +1,29 @@
+name: reproduce-finrisk-ope
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "directional_validation/**"
+      - "src/**"
+      - "scripts/**"
+      - "data/**"
+
+jobs:
+  reproduce:
+    runs-on: windows-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          cache: pip
+      - run: python -m pip install -r src/requirements-lock.txt
+      - run: python scripts/reproduce.py --output outputs/results_ci --assets artifacts/ci
+      - uses: actions/upload-artifact@v4
+        with:
+          name: finrisk-ope-reproduction
+          path: |
+            outputs/results_ci
+            artifacts/ci

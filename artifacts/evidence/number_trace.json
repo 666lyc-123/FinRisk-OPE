@@ -1,0 +1,12 @@
+{
+  "input_sha256": {
+    "all_cases.csv": "533b39112236df54d99c5afd5ff19e17e14b59dea0afff9bd8f85fb8269e4247",
+    "task_inventory.json": "1bb1e58a7cc1a6d45dbf75d423ad2e31089368235145d3da0a6020bf553a9353",
+    "manifest.json": "cf8ef96afa679a5d09f061e7cac27497ef60b4a88dba3b487bd683c810c3528a"
+  },
+  "case_rows": 50784,
+  "test_rows_per_scheme": 12696,
+  "risk_evaluable": 10324,
+  "reward_cells": 2068330,
+  "script_sha256": "a656934ef53c0d3eb43ee54792097d8f5e01769b5a24bf0b5ae119407766646b"
+}
