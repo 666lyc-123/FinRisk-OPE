@@ -122,7 +122,7 @@ def figures(paper, coverage, selectors, cells):
     fig,ax=plt.subplots(figsize=(7.16,0.92))
     ax.set(xlim=(0,11.55),ylim=(0,1)); ax.axis('off')
     titles=['Public panels','Reward matrix','Logged feedback','OPE diagnostics','SCROPE++']
-    subtitles=['15 tasks',f'{cells/1e6:.3f}M cells\n20 lagged features','8 behaviors\n3 seeds','DR intervals\nweighted CVaR95','Return LCB\nrisk + support']
+    subtitles=['15 tasks',f'{cells/1e6:.3f}M cells','8 behaviors','DR + CVaR95','Risk + support']
     colors=['#EEF1F4','#EDF3FA','#FCF4DE','#EAF5F2','#F9EFEC']
     for i,(title,sub,color) in enumerate(zip(titles,subtitles,colors)):
         left=i*2.30
